@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="collective.geo.geopoint">
+    
+    <include package="plone.app.z3cform" />
+
+    <adapter
+      factory="z3c.form.browser.text.TextFieldWidget"
+      for=".schema.IGeoPointField
+           z3c.form.interfaces.IFormLayer"
+      />
+      
+</configure>
