@@ -3,6 +3,8 @@ collective.geo.geopoint
 
 collective.geo.geopoint is a package to manage geographical data like a point. 
 
+Tests
+-----
 First we defined a field and not just a widget to be open to further development. Geopointschema implements the IField and it stores float values.
   >>> from plone.z3cform.tests import setup_defaults
   >>> setup_defaults()
