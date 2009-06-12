@@ -4,12 +4,12 @@ from zope import schema
 from collective.geo.geopoint import GeopointMessageFactory as _
 
 class IGeoPoint(Interface):
-    longitude = Geopointschema(title=u'Longitude',
+    longitude = Geopointschema(title=_(u'Longitude'),
                                          description=_(u""),
                                          default=None,
                                          required=True)
 
-    latitude  = Geopointschema(title=u'Latitude',
+    latitude  = Geopointschema(title=_(u'Latitude'),
                                          description=_(u""),
                                          default=None,
                                          required=True)

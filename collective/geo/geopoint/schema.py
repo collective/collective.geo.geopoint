@@ -6,7 +6,7 @@ from zope.schema.interfaces import IFromUnicode
 from zope.schema._bootstrapfields import Field, Orderable
 
 
-class NotFloat(schema.ValidationError):
+class NotFloat(schema.ValidationError): 
     __doc__ = _("""Value must be a float ex. 1.111111""")
 
 
