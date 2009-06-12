@@ -27,6 +27,8 @@ setup(name='collective.geo.geopoint',
           'setuptools',
           # -*- Extra requirements: -*-
           'plone.app.z3cform',
+          'collective.geo.openlayers',
+          'collective.geo.settings',
           'geopy',
       ],
       entry_points="""

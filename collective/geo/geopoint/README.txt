@@ -69,11 +69,11 @@ IGeoPoint interface has two properties: latitude and longitude
 
 in this case the form also has two fields: latitude and longitude 
   >>> geoform.fields.keys()
-  ['latitude', 'longitude']
+  ['longitude', 'latitude']
 
 and the respective widgets
   >>> geoform.widgets.keys()
-  ['latitude', 'longitude']
+  ['longitude', 'latitude']
 
 Now we test the form layout that include the widget-map macro.
   >>> from plone.z3cform.layout import wrap_form
@@ -84,10 +84,22 @@ When we render the form, the template contains a placeholder div that will conta
   >>> '<div id="map" class="widget-map"' in view() 
   True
 
-Openlayers javascript
+Openlayers javascript,
   >>> 'OpenLayers.js' in view() 
   True
 
-and geopoint javascript
-  >>> '++resource++geopoint.js' in view() 
+generic geo.openlayers javascript 
+  >>> '++resource++geo-openlayers.js' in view()
   True
+
+and geopoint javascript
+  >>> '++resource++geo-point.js' in view() 
+  True
+
+in the default configuration we use a google maps layer and must include google maps javascript
+    >>> "http://maps.google.com/maps?file=api&amp;amp;v=2&amp;amp;key=" in view()
+    True
+
+and parameter for geo-openlayers.js
+    >>> "var googlemaps = true" in view()
+    True
