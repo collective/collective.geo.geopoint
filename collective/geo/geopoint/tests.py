@@ -20,7 +20,6 @@ class TestCase(ptc.PloneTestCase):
             zcml.load_config('configure.zcml',
                              collective.geo.geopoint)
             fiveconfigure.debug_mode = False
-
         @classmethod
         def tearDown(cls):
             pass
@@ -28,13 +27,10 @@ class TestCase(ptc.PloneTestCase):
 
 def test_suite():
     return unittest.TestSuite([
-
-        doctest.DocFileSuite(
+        ztc.ZopeDocFileSuite(
             'README.txt', package='collective.geo.geopoint',
-            setUp=testing.setUp, tearDown=testing.tearDown,
-            optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS,
+            test_class=ptc.PloneTestCase,
             ),
-
         ])
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="collective.geo.geopoint">
     
@@ -11,4 +12,12 @@
            z3c.form.interfaces.IFormLayer"
       />
       
+    <browser:page
+        name="geopoint-macros"
+        for="*"
+        class=".geopointform.GeopointMacros"
+        permission="zope.Public" />
+        
+
+
 </configure>

@@ -1,9 +1,3 @@
-<div class="map" style="float: right; width: 50%">
-    <div tal:repeat="widget view/widgets/values">
-        <span tal:replace="widget/name" />
-    </div>
-</div>
-
 <div tal:attributes="class view/css_class|nothing" >
   <h3 tal:replace="structure view/heading|nothing" />
   <div tal:replace="structure view/contents_top|nothing" />
@@ -12,5 +6,4 @@
   <div tal:replace="structure view/contents_bottom|nothing" />
 </div>
 
-
-
+<metal:map use-macro="context/@@geopoint-macros/map-widget" />
