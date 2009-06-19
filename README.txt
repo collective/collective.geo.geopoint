@@ -1,9 +1,8 @@
 Introduction
 ============
 
-collective.geo.geopoint is a package to manage geographical data like a point.
+collective.geo.geopoint provides some generic classes for collective.geo.* packages.
 
-It provides a generics classes for collective.geo.* packages.
 
 Requirements
 ------------
@@ -29,4 +28,10 @@ Alternatively, buildout users can install collective.geo.geopoint as part of a s
         zcml = 
             collective.geo.geopoint
 
+
+Contributors
+============
+
+* Giorgio Borelli - gborelli
+* Silvio Tomatis - silviot
 
