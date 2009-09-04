@@ -14,3 +14,6 @@ class IGeoPoint(Interface):
                                          default=None,
                                          required=True)
 
+
+class IGeocoder(Interface):
+    """ marker interface to geocoder features """

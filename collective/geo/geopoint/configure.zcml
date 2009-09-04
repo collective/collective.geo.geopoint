@@ -15,7 +15,12 @@
       for=".schema.IGeoPointField
            z3c.form.interfaces.IFormLayer"
       />
-      
+
+    <utility
+        component=".geocoder.Geocoder"
+        provides = ".interfaces.IGeocoder"
+    />
+    
     <browser:page
         name="geopoint-macros"
         for="*"

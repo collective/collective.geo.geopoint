@@ -1,15 +1,14 @@
 import unittest
 
-from Testing import ZopeTestCase as ztc
 
 from Products.Five import zcml
 from Products.Five import fiveconfigure
 from Products.PloneTestCase import PloneTestCase as ptc
 
 from zope.component import provideUtility
-# I don't like this ...
-from collective.geo.settings import geoconfig
-from collective.geo.settings import interfaces
+
+from collective.geo.settings.geoconfig import GeoSettings
+from collective.geo.settings.interfaces import IGeoSettings
 
 from Products.PloneTestCase.layer import onsetup
 
@@ -28,26 +27,16 @@ def setup_product():
 setup_product()
 ptc.setupPloneSite(products=['collective.geo.geopoint'])
 
-class TestCase(ptc.PloneTestCase):
-    pass
+
 
 def setUp(test):
     # registering the utility 
     # usually done by componentregistry.xml
     provideUtility(
-              geoconfig.GeoSettings,
-              provides = interfaces.IGeoSettings
+              GeoSettings,
+              provides = IGeoSettings
               )
 
 
-def test_suite():
-    return unittest.TestSuite([
-        ztc.ZopeDocFileSuite(
-            'README.txt', package='collective.geo.geopoint',
-            test_class=TestCase,
-            setUp=setUp
-            ),
-        ])
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
+class TestCase(ptc.PloneTestCase):
+    pass

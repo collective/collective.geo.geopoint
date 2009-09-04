@@ -26,6 +26,8 @@ setup(name='collective.geo.geopoint',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'geopy',
+          'BeautifulSoup',
           'plone.app.z3cform',
           'collective.geo.openlayers',
           'collective.geo.settings',
