@@ -99,7 +99,7 @@ and geopoint javascript
   True
 
 in the default configuration we use a google maps layer and must include google maps javascript
-    >>> "http://maps.google.com/maps?file=api&amp;amp;v=2&amp;amp;key=" in view()
+    >>> "http://maps.google.com/maps?file=api&amp;v=2&amp;key=" in view()
     True
 
 and parameter for geo-openlayers.js
