@@ -6,9 +6,9 @@ class GeopointBaseForm(object):
 
     @property
     def geopoint_js(self):
-        latitude_id = self.widgets['latitude'].id
         longitude_id = self.widgets['longitude'].id
-        return "var latitude_widget_id = '%s';\nvar longitude_widget_id = '%s';" % (latitude_id, longitude_id)
+        latitude_id = self.widgets['latitude'].id
+        return "var longitude_widget_id = '%s';\nvar latitude_widget_id = '%s';" % (longitude_id, latitude_id)
 
 
 class GeopointMacros(object):

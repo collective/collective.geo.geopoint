@@ -5,7 +5,7 @@ class GeoPoint(object):
     interface.implements(IGeoPoint)
 
     def __init__(self, latitude=None, longitude=None):
-        self.latitude, self.longitude = latitude, longitude
+        self.longitude, self.latitude = longitude, latitude
 
     def __repr__(self):
         return "<GeoPoint with longitude=%r, latitude=%r>" % (self.longitude, self.latitude)

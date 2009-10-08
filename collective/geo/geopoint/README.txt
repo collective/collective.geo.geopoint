@@ -59,7 +59,7 @@ If we feed a string it raising a wrongType excepetion
 
 So far we can use Geopointschema into z3c.form to manage geographical points.
 We haved create a specific interface (IGeoPoint) and a specific template that renders a form with a web map like openstreetmaps or googlemaps.
-IGeoPoint interface has two properties: latitude and longitude
+IGeoPoint interface has two properties: longitude and latitude
   >>> from z3c.form import form, field
   >>> from collective.geo.geopoint.geopointform import GeopointBaseForm
 
@@ -69,7 +69,7 @@ IGeoPoint interface has two properties: latitude and longitude
   >>> geoform = GeoPointForm(None, TestRequest())
   >>> geoform.update()
 
-in this case the form also has two fields: latitude and longitude 
+in this case the form also has two fields: longitude and latitude
   >>> geoform.fields.keys()
   ['longitude', 'latitude']
 
