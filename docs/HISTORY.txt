@@ -4,6 +4,10 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Updated geopoint macro to allow the geopoint Javascript to be excluded
+  (for views like the content location Coordinate form, which supplies
+  its own 'edit' code).
+  [rockdj] 
 * Updated coordinate references to be consistent with WGS 1984 
   reference system.  This involves standardising the  coordinate order 
   to be [longitude, latitude] rather than [latitude, longitude].

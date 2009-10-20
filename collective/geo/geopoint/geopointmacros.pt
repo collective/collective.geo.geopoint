@@ -8,8 +8,9 @@
 
   <metal:define define-macro="map-widget"                  
                 tal:define="geosettings python:context.restrictedTraverse('@@geosettings-macros');
-                google_maps_js python:geosettings.google_maps_js">
-
+                google_maps_js python:geosettings.google_maps_js;
+                ignore_geopointjs ignore_geopointjs|python:False;">
+ 
     <div id="map" class="widget-map"  
          style="width: 40%; height: 200px;">
         <!--   openlayers map     -->
@@ -23,7 +24,8 @@
     
     <script type="text/javascript" src="./OpenLayers.js"></script>
     <script type="text/javascript" src="++resource++geo-openlayers.js"></script>
-    <script type="text/javascript" src="++resource++geo-point.js"></script>
+    <script type="text/javascript" src="++resource++geo-point.js"
+            tal:condition="not:ignore_geopointjs"></script>
   </metal:define>
 
   </body>
