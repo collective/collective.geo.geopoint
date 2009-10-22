@@ -22,4 +22,8 @@
         class=".geopointform.GeopointMacros"
         permission="zope.Public" />
 
+    <browser:resource
+       name="geo-point.js"
+       file="geo-point.js" />
+
 </configure>
