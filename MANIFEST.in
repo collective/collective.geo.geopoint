@@ -1,1 +1,1 @@
-global-include *.txt *.zcml *.pt *.pot *.mo *.po *.sh *.GPL
+global-include *.txt *.zcml *.pt *.pot *.mo *.po *.sh *.GPL *.js
