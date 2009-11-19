@@ -31,7 +31,7 @@ OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {
         markers.addMarker(new OpenLayers.Marker(lonlat,icon));
         
         // transform to displayProjection: new OpenLayers.Projection("EPSG:4326")
-        lonlat.transform(map.projection, map.displayProjection);
+        lonlat.transform(map.getProjectionObject(), map.displayProjection);
 
         // populating the widgets
         document.getElementById(longitude_widget_id).value = lonlat.lon;
