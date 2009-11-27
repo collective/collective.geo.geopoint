@@ -1,7 +1,7 @@
 collective.geo.geopoint
 =======================
 
-collective.geo.geopoint is a package to manage geographical data like a point. 
+collective.geo.geopoint is a package to manage geographical data like a point.
 
 Tests
 -----
@@ -39,9 +39,9 @@ In configure.zcml we register an adapter for IGeoPointSchema and IFormLayer
   >>> widget.id = 'latitude'
   >>> widget.update()
   >>> print widget.render()
-  <input type="text" id="latitude" name=""
-         class="text-widget required geopointschema-field"
-         value="" />
+  <input id="latitude" name=""
+         class="geopointschema-field required text-widget"
+         value="" type="text" />
   <BLANKLINE>
 
 Nothing special here, we just reuse TextWidget from z3c.form
@@ -83,19 +83,19 @@ Now we test the form layout that include the widget-map macro.
   >>> view = MyGeoForm(portal, portal.REQUEST).__of__(portal)
 
 When we render the form, the template contains a placeholder div that will contain a map,
-  >>> '<div id="map" class="widget-map"' in view() 
+  >>> '<div id="map" class="widget-map"' in view()
   True
 
 Openlayers javascript,
-  >>> 'OpenLayers.js' in view() 
+  >>> 'OpenLayers.js' in view()
   True
 
-generic geo.openlayers javascript 
+generic geo.openlayers javascript
   >>> '++resource++geo-openlayers.js' in view()
   True
 
 and geopoint javascript
-  >>> '++resource++geo-point.js' in view() 
+  >>> '++resource++geo-point.js' in view()
   True
 
 in the default configuration we use a google maps layer and must include google maps javascript

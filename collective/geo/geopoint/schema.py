@@ -6,7 +6,7 @@ from zope.schema.interfaces import IFromUnicode
 from zope.schema._bootstrapfields import Field, Orderable
 
 
-class NotFloat(schema.ValidationError): 
+class NotFloat(schema.ValidationError):
     __doc__ = _("""Value must be a float ex. 1.111111""")
 
 
@@ -23,7 +23,7 @@ class Geopointschema(Orderable, Field):
 
     def fromUnicode(self, u):
         """
-        >>> f = Float()
+        >>> f = Geopointschema()
         >>> f.fromUnicode("1.25")
         1.25
         >>> f.fromUnicode("1.25.6")
@@ -41,4 +41,3 @@ class Geopointschema(Orderable, Field):
         except:
             raise NotFloat(value)
         super(Geopointschema, self).validate(value)
-

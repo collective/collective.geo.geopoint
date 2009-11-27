@@ -1,5 +1,6 @@
 import unittest
 
+from zope.testing import doctest
 from Testing import ZopeTestCase as ztc
 
 from Products.Five import zcml
@@ -14,6 +15,7 @@ from collective.geo.settings import interfaces
 from Products.PloneTestCase.layer import onsetup
 
 import collective.geo.geopoint
+import collective.geo.geopoint.schema
 
 @onsetup
 def setup_product():
@@ -32,7 +34,7 @@ class TestCase(ptc.PloneTestCase):
     pass
 
 def setUp(test):
-    # registering the utility 
+    # registering the utility
     # usually done by componentregistry.xml
     provideUtility(
               geoconfig.GeoSettings,
@@ -47,6 +49,8 @@ def test_suite():
             test_class=TestCase,
             setUp=setUp
             ),
+        doctest.DocTestSuite(collective.geo.geopoint.schema,
+                             optionflags=doctest.REPORT_ONLY_FIRST_FAILURE | doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
         ])
 
 if __name__ == '__main__':
