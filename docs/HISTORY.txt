@@ -4,6 +4,10 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Added support for Spanish localization
+  [macagua]
+* Added improvements about the Internationalization
+  [macagua]
 * Updated geopoint macro to allow the geopoint Javascript to be excluded
   (for views like the content location Coordinate form, which supplies
   its own 'edit' code).
