@@ -4,6 +4,8 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Updated i18n support
+  [macagua]
 * Added support for Spanish localization
   [macagua]
 * Added improvements about the Internationalization

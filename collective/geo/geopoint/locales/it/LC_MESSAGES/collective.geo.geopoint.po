@@ -16,19 +16,23 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geo.geopoint\n"
 "X-Is-Fallback-For: it-it it-ch it-sm it-hr it-si\n"
-#: ./interfaces.py:8
-msgid ""
+
+#: ../interfaces.py:13
+msgid "Enter the Latitude"
 msgstr ""
 
-#: ./interfaces.py:12
+#: ../interfaces.py:8
+msgid "Enter the Longitude"
+msgstr ""
+
+#: ../interfaces.py:12
 msgid "Latitude"
 msgstr "Latitudine"
 
-#: ./interfaces.py:7
+#: ../interfaces.py:7
 msgid "Longitude"
 msgstr "Longitudine"
 
-#: ./schema.py:10
+#: ../schema.py:10
 msgid "Value must be a float ex. 1.111111"
 msgstr "Il valore dev'essere un decimale, es. 1.111111"
-

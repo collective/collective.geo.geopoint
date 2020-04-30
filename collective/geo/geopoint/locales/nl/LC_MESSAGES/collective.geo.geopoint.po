@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2010-06-22 07:44+0000\n"
+"POT-Creation-Date: 2020-04-30 11:13+0000\n"
 "PO-Revision-Date: 2009-09-20 13:24+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
 "Language-Team: Rob Gietema <rob@fourdigits.nl>\n"
@@ -14,15 +14,22 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geo.geopoint\n"
 
-#: ./interfaces.py:12
+#: ../interfaces.py:13
+msgid "Enter the Latitude"
+msgstr ""
+
+#: ../interfaces.py:8
+msgid "Enter the Longitude"
+msgstr ""
+
+#: ../interfaces.py:12
 msgid "Latitude"
 msgstr "Lengtegraad"
 
-#: ./interfaces.py:7
+#: ../interfaces.py:7
 msgid "Longitude"
 msgstr "Breedtegraad"
 
-#: ./schema.py:10
+#: ../schema.py:10
 msgid "Value must be a float ex. 1.111111"
 msgstr "De waarde moet een komma getal zijn bv. 1.111111"
-

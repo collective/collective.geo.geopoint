@@ -11,6 +11,19 @@ Requirements
 * collective.geo.openlayers
 * collective.geo.settings
 
+
+Translations
+============
+
+This product has been translated into
+
+- Dutch.
+
+- Spanish.
+
+- Italian.
+
+
 Installation
 ============
 Just a simple easy_install collective.geo.geopoint is enough.
@@ -35,3 +48,4 @@ Contributors
 * Giorgio Borelli - gborelli
 * Silvio Tomatis - silviot
 * David Breitkreutz - rockdj
+* Leonardo J. Caballero G. - macagua
